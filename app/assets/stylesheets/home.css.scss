@@ -1,3 +1,147 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    margin: 0px;
+    font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+    color: #4A4A4A ;
+}
+#topBar{
+/*    background: url("blackBackground.png");*/
+    
+    height: 45px;
+    background:rgba(15, 15, 15, 0.5) none repeat scroll 0 0 !important;
+    color:#FFF;
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    z-index: 999;
+    width: 100%;
+    box-shadow:0 0 40px rgba(0,0,0,0.3);
+    -moz-box-shadow:0 0 40px rgba(0,0,0,0.3);
+    -o-box-shadow:0 0 40px rgba(0,0,0,0.3);
+    -ms-box-shadow:0 0 40px rgba(0,0,0,0.3)
+}
+
+/*.top-bar{height:45px;background:#282828;color:#FFF;
+         position:absolute;left:0;top:0;right:0;z-index:999;
+         width:100%;
+         box-shadow:0 0 40px rgba(0,0,0,0.3);
+        -moz-box-shadow:0 0 40px rgba(0,0,0,0.3);
+        -o-box-shadow:0 0 40px rgba(0,0,0,0.3);
+        -ms-box-shadow:0 0 40px rgba(0,0,0,0.3)}*/
+#indexCover {
+    position: relative;
+    background-image:url("1.jpg");
+    width: 100%;
+    height: 430px;
+    overflow: hidden}
+#indexCover ul {margin-top: 10px;margin-right:10px;}
+#indexCover li {
+    padding-right: 10px;
+    margin-left: 10px;
+    float:right;
+    list-style:none;
+}
+#indexCover a {
+    font-size: 15px;
+    font-family:sans-serif;
+    text-decoration:none;
+    font-weight: bold;
+    color:white;
+}
+#indexCover .next,
+#indexCover .prev{
+    background-image: url("shows.png");
+    background-repeat: no-repeat;
+    position:absolute;
+    width:30px;
+    height:40px;
+    top:50%;
+    margin-top:0px;
+    cursor:pointer;
+    background-position:100px -3008px
+}
+#indexCover:hover .prev{
+    left:10px;
+    background-position:0px -3008px
+}
+#indexCover:hover .next{
+    right: 10px;
+    background-position:-25px -3008px
+}
+#blank1,#blank2{
+    height: 30px;
+    width: 100%;
+}
+#funMenu{
+    position: relative;
+    width:100%;
+    height: 200px;
+    margin:0 0;
+    background-color: green;
+}
+#M1{
+    position: absolute;
+    width: 33%;
+    height:100%;
+    background-color: yellow;
+}
+#M2{
+    position: absolute;
+    margin-left: 33%;
+    height:100%;
+    width:34%;
+    background-color: green;
+}
+#M3{
+    position: absolute;
+    margin-left: 67%;
+    height:100%;
+    width: 33%;
+    background-color: black;
+}
+.box1{
+    width: 100px;
+    margin: 0px;
+    padding: 0px;
+    min-height: 100px;
+    position: relative;
+    display: inline-block;
+    background: -webkit-gradient(linear, 0% 20%, 0% 1000%, from(#fff), to(#fff), color-stop(.1,#f3f3f3));
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.1) inset;
+    -webkit-border-bottom-right-radius: 6px 50px;
+}
+
+.box1:before{
+    content: '';
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    -webkit-transform: translate(-35px,-40px) skew(0deg,30deg) rotate(-25deg);
+}
+
+.box1:after{
+    content: '';
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
+    -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+    -webkit-transform: rotate(2deg) translate(20px,25px) skew(20deg);
+}
+
+.box1 img {
+    width: 100%;
+    margin-top: 5px;
+}
