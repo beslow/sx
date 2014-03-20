@@ -1,4 +1,6 @@
 Sx::Application.routes.draw do 
+  get "login/index"
+  get "register/index"
   #map.root :controller => 'home'
   get "home/index"
   root :to => 'home#index'
