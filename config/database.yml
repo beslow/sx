@@ -3,15 +3,15 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
-#development:
- # adapter: sqlite3
- # database: db/development.sqlite3
- # pool: 5
- # timeout: 5000
+development:
+  #adapter: sqlite3
+  #database: db/development.sqlite3
+  #pool: 5
+  #timeout: 5000
 development:
   adapter: mysql
   encoding: utf8
-  database: bitnami_redmine
+  database: sx
   pool: 5
   username: root
   password: 123456
