@@ -5,7 +5,5 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.timestamps
     end
-    add_column :users,:name,:text
-    add_column :users,:password,:text
   end
 end
