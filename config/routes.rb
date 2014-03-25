@@ -1,8 +1,15 @@
 Sx::Application.routes.draw do 
   get "login/index"
+  get "login/logout"
+
+  post "login/index" => "login#index"
+  post "login/login" => "login#login"
   get "register/index"
+  post "register/register" => "register#register"
   #map.root :controller => 'home'
   get "home/index"
+  #post '/ads/create‘=>’ads#create'
+  post "/home/index" => "home#index"
   root :to => 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

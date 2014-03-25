@@ -1,8 +1,5 @@
 class HomeController < ApplicationController
   def index
-    u = User.new
-	u.name = 'cxp'
-	u.password = '123456'
-	u.save
+    @current_user = User.find_by(id: session[:user_id])
   end
 end

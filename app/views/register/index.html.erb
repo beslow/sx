@@ -1,2 +1,27 @@
-<h1>Register#index</h1>
-<p>Find me in app/views/register/index.html.erb</p>
+<div class="top_register"></div>
+<%= form_for 'register_form',:url => {:controller=>"register",:action => "register"} do |f| %>
+<div class="register">
+  <table class="ipt_box">
+    <tr>
+      <td><%= f.label :name %></td>
+    <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+    <td><%= f.label :password %></td>
+    <td><%= f.password_field :password %></td>
+    </tr>
+    <tr>
+    <td><%= f.label "password again" %></td>
+    <td><%= f.password_field :password_again %></td>
+    </tr>
+    <tr>
+    <td><%= f.label :email %></td>
+    <td><%= f.text_field :email %></td>
+    </tr>
+    <tr>
+    <td><%= f.label :company %></td>
+    <td><%= f.text_field :company %></td>
+    </tr>
+  </table></div>
+  <%= f.submit "login"  %>
+<% end %>
