@@ -5,10 +5,16 @@
     height:100px;
 }
 .register{
-    width: 100%;
+    width: 840px;
+    margin:0 auto;
+}
+.logo_register {
+    width: auto;
+    height: 30px;
+    padding: 50px 0 10px 5px;
 }
 .register table {
-    width: 300px;
+    width: 350px;
     margin:auto;
 }
 .register li {
@@ -16,7 +22,19 @@
     list-style: none;
     margin: 8px;
 }
- .ipt_box input{
+.required {
+    color: #bb0000;
+}
+.ipt_box td {
+    text-align: right;
+}
+.ipt_box label{
+    width:100%;
+    text-align: right;
+    color: #444;
+    font-size:15px;
+}
+.ipt_box input{
     width:240px;
     color:#333;
     line-height:normal;
