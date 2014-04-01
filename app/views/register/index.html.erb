@@ -27,7 +27,7 @@
       <td><%= f.label "用户名" %><span class="required"> *</span></td>
     <td>
         <%= f.text_field :name,:required => true %>
-        <%= observe_field :text_test,  :update => 'name_message',
+        <%= observe_field 'name',  :update => 'name_message',
                           :url => {:action => 'validate_name_unique', :only_path=>false},
                           :with => :name %>
     </td>

@@ -11,6 +11,8 @@ Sx::Application.routes.draw do
   #post '/ads/create‘=>’ads#create'
   post "/home/index" => "home#index"
   root :to => 'home#index'
+  get "users/index"
+  post "users/index" => "users#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -37,7 +39,7 @@ Sx::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-
+  #   
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

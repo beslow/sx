@@ -1,5 +1,6 @@
 class LoginController < ApplicationController
   def index
+    @user = User.find_by(id: '1')
   end
   def login
     if request.get?
