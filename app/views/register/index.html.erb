@@ -1,3 +1,4 @@
+<%= javascript_include_tag "register"%>
 <div class="nav_top_2011">
 <p><span style="color:red;">您还未登录！</span>|<a href="/account/login" target="_top">登录</a>|<a href="/account/register" target="_top">注册</a>|<a href="/help/faq" target="_blank">帮助</a></p><ul>
 <li><a href="http://www.csdn.net/" target="_blank">首页</a></li>
@@ -24,34 +25,35 @@
   </ul>
   <table class="ipt_box">
     <tr>
-      <td><%= f.label "用户名" %><span class="required"> *</span></td>
-    <td>
-        <%= f.text_field :name,:required => true %>
-        <%= observe_field 'name',  :update => 'name_message',
-                          :url => {:action => 'validate_name_unique', :only_path=>false},
-                          :with => :name %>
-    </td>
-    <td><div id="name_message"></div></td>
+      <td>
+        <%= f.label "用户名" %><span class="required"> *</span>
+      </td>
+      <td>
+        <%= f.text_field :name,required: true,class:"txt1_bg" %>
+      </td>
+      <td>
+        <div id="divName_info"></div>
+      </td>
     </tr>
     <tr><td>&nbsp;</td></tr>
     <tr>
     <td><%= f.label "密码" %><span class="required"> *</span></td>
-    <td><%= f.password_field :password,:required => true %></td>
+    <td><%= f.password_field :password,required:true,class:"txt1_bg" %></td>
     </tr>
     <tr><td>&nbsp;</td></tr>
     <tr>
     <td><%= f.label "密码确认" %><span class="required"> *</span></td>
-    <td><%= f.password_field :password_again,:required => true %></td>
+    <td><%= f.password_field :password_again,required:true,class:"txt1_bg" %></td>
     </tr>
     <tr><td>&nbsp;</td></tr>
     <tr>
     <td><%= f.label "邮箱" %><span class="required"> *</span></td>
-    <td><%= f.text_field :email,:required => true %></td>
+    <td><%= f.text_field :email,required:true,class:"txt1_bg" %></td>
     </tr>
     <tr><td>&nbsp;</td></tr>
     <tr>
     <td><%= f.label "单位" %></td>
-    <td><%= f.text_field :company %></td>
+    <td><%= f.text_field :company,class:"txt1_bg" %></td>
     </tr>
   </table>
   <br/><br/><br/>

@@ -1,3 +1,4 @@
+<%=  javascript_include_tag "login" %>
 <%= form_for 'login_form',:url => {:controller=>"login",:action => "login"} do |f| %>
    <table>
      <tr>
@@ -13,4 +14,5 @@
      </tr>
    </table>
 <% end %>
-<a href="#" data-background-color = "#990000">Paint it red</a>
+<a href="#" data-background-color = "#990000" data-no-turbolink >Paint it red</a>
+<%= debug(@user)%>

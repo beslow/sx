@@ -2,6 +2,7 @@ class RegisterController < ApplicationController
   def index
   end
   def register
+    logger.info 'informational message'
     user = User.new
     user.name = params[:register_form][:name]
     user.password = params[:register_form][:password]

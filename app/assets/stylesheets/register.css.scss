@@ -47,8 +47,8 @@ li {
     text-align: -webkit-match-parent;
 }
 .register table {
-    width: 350px;
-    margin:auto;
+    width: atuo;
+    margin-left:250px;
 }
 .required {
     color: #bb0000;
@@ -62,7 +62,7 @@ li {
     color: #444;
     font-size:15px;
 }
-.ipt_box input{
+/*.ipt_box input{
     width:240px;
     color:#333;
     line-height:normal;
@@ -109,7 +109,7 @@ li {
     border-right-style:solid;
     border-bottom-style:solid;
     border-left-style:solid;
-}
+}*/
 .register_button{
     background:#fff url("pic_button01.gif") left top no-repeat;
     height: 42px;
@@ -199,3 +199,15 @@ list-style: none;
 color: #333;
 text-decoration: none;
 }
+#divName_info {
+  width:auto;
+}
+.txt2_bg {	border:1px solid #A0B4C5;
+  height:22px;width:220px;
+  line-height:22px;
+  font-size:14px;}
+.txt1_bg {border:1px solid #727272;
+  height:22px;width:220px;
+  background-color:#FFFBD5;
+  font-size:14px;
+  line-height:22px;}

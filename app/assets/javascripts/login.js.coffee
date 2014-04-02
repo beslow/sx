@@ -3,6 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 paintIt = (element, backgroundColor, textColor) ->
+  alert("2222");
   element.style.backgroundColor = backgroundColor
   if textColor?
     element.style.color = textColor
