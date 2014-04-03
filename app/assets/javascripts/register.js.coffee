@@ -29,3 +29,22 @@ $ ->
     else
       $("#divName_info").empty()
     false
+
+
+$ ->
+  $("[data-validate]").blur ->
+    $this = $(this)
+    $.get($this.data("validate"),
+      name: $this.val()
+    ).success(->
+      $("#divName_info").empty()
+      $("#divName_info").append ""+"can"
+      return
+    ).error ->
+      $("#divName_info").empty()
+      $("#divName_info").append ""+"exist"
+      return
+
+    return
+
+  return

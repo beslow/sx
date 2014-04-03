@@ -16,7 +16,7 @@ class LoginController < ApplicationController
         redirect_to home_index_path
       else
         render login_index_path
-        flash[:notice] = "Invalid user/password combination"
+        flash[:notice] = 'Invalid user/password combination'
       end
     end
   end

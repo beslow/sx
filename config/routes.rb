@@ -1,18 +1,21 @@
-Sx::Application.routes.draw do 
-  get "login/index"
-  get "login/logout"
-
-  post "login/index" => "login#index"
-  post "login/login" => "login#login"
-  get "register/index"
-  post "register/register" => "register#register"
-  #map.root :controller => 'home'
-  get "home/index"
-  #post '/ads/create‘=>’ads#create'
-  post "/home/index" => "home#index"
+Sx::Application.routes.draw do
+  #homesite
   root :to => 'home#index'
-  get "users/index"
-  post "users/index" => "users#index"
+  resource :register ,:login
+  #login
+  get 'login/index'
+  post 'login/login' => 'login#login'
+  get 'login/logout'
+  #register
+  get 'register/index'
+  post 'register/register' => 'register#register'
+  get 'home/index'
+  #users
+  resources :users do
+    collection do
+      get 'checkname'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -39,7 +42,7 @@ Sx::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-  #   
+  #
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

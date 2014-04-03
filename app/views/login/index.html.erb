@@ -1,5 +1,5 @@
 <%=  javascript_include_tag "login" %>
-<%= form_for 'login_form',:url => {:controller=>"login",:action => "login"} do |f| %>
+<%= form_for('login_form',url:'/login/login') do |f| %>
    <table>
      <tr>
       <%= f.label :name %>

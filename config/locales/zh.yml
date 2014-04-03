@@ -1,0 +1,13 @@
+zh:
+#app/views/register/index.html.erb
+  name: 用户名
+  password: 密码
+  password_again: 确认密码
+  mail: 邮箱
+  company: 单位
+  btn_register: 注册
+
+#app/views/home/index.html.erb
+  register: 注册
+  login: 登陆
+  logout: 退出
