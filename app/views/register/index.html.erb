@@ -30,7 +30,7 @@
         <%= f.label t(:name) %><span class="required"> *</span>
       </td>
       <td>
-        <%= f.text_field :name,required: true,class:"txt1_bg","data-validate"=> '/users/checkname' %>
+        <%= f.text_field :name,required: true,class:'txt1_bg','data-validate'=> '/users/checkname' %>
       </td>
       <td>
         <div id="divName_info"></div>
@@ -42,10 +42,10 @@
         <%= f.label t(:password) %><span class="required"> *</span>
       </td>
       <td>
-        <%= f.password_field :password,required:true,class:"txt1_bg" %>
+        <%= f.password_field :password,required:true,class:'txt1_bg',"data-length" => "" %>
       </td>
       <td>
-        <div id="divPassword1_info"></div>
+        <div id='divPassword1_info'></div>
       </td>
     </tr>
     <tr><td>&nbsp;</td></tr>

@@ -6,6 +6,9 @@ chkName = ->
   if name is "" # 为空
     return 0
   1
+chkLength =(element) ->
+  length = element.val().length
+
 $ ->
   $("#register_form_name").bind "focus",->
     retname = chkName()
@@ -46,5 +49,12 @@ $ ->
       return
 
     return
-
+  $('[data-length').focus ->
+    length = chkLength($(this))
+    if length < 6 || length > 15
+      $("#divPassword1_info").empty()
+      $("#divPassword1_info").append "长度不得小于6，不得超过15"
+    else
+      $("#divPassword1_info").empty()
   return
+return
