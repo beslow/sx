@@ -1,16 +1,5 @@
 <%= javascript_include_tag "register"%>
-<div class="nav_top_2011">
-<p><span style="color:red;">您还未登录！</span>|<a href="/account/login" target="_top">登录</a>|<a href="/account/register" target="_top">注册</a>|<a href="/help/faq" target="_blank">帮助</a></p><ul>
-<li><a href="http://www.csdn.net/" target="_blank">首页</a></li>
-<li><a href="http://news.csdn.net/" target="_blank">业界</a></li>
-<li><a href="http://mobile.csdn.net/" target="_blank">移动</a></li>
-<li><a href="http://cloud.csdn.net/" target="_blank">云计算</a></li>
-<li><a href="http://sd.csdn.net/" target="_blank">研发</a></li>
-<li><a href="http://bbs.csdn.net/" target="_blank">论坛</a></li>
-<li><a href="http://blog.csdn.net/" target="_blank">博客</a></li>
-<li><a href="http://download.csdn.net/" target="_blank">下载</a></li>
-</ul>
-</div>
+
 <div class="top_register"></div>
 <%= form_for('register_form',url:'/register/register') do |f| %>
 
@@ -54,7 +43,7 @@
         <%= f.label t(:password_again) %><span class="required"> *</span>
       </td>
       <td>
-        <%= f.password_field :password_confirmation,required:true,class:"txt1_bg" %>
+        <%= f.password_field :password_confirmation,required:true,class:"txt1_bg",'data-confirmation' => '' %>
       </td>
       <td>
         <div id="divPassword2_info"></div>
@@ -66,7 +55,7 @@
         <%= f.label t(:mail) %><span class="required"> *</span>
       </td>
       <td>
-        <%= f.text_field :email,required:true,class:"txt1_bg" %>
+        <%= f.text_field :email,required:true,class:"txt1_bg",'data-email'=>'' %>
       </td>
       <td>
         <div id="divMail_info"></div>
@@ -82,7 +71,12 @@
       </td>
     </tr>
   </table>
-  <br/><br/><br/>
+  <br/>
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% else %>
+    <br/>
+  <% end %><br/>
   <div class="register_button">
 	<%= f.submit t(:btn_register)  %>
   </div>

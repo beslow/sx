@@ -1,6 +1,9 @@
 class RegisterController < ApplicationController
   include RegisterHelper
   def index
+    binding.pry
+    x=1
+    x=2
   end
   def register
     user = User.new
