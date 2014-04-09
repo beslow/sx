@@ -16,3 +16,48 @@
 <% end %>
 <a href="#" data-background-color = "#990000" data-no-turbolink >Paint it red</a>
 <%= debug(@user)%>
+
+<div id="container">
+  <div id="content">
+    <div class="wrapper">
+      <form name="f_0_11_1_3_1" method="post" action="/app/wa/signIn">
+        <input type="hidden" value="false" name="returning" id="returning" />
+        <table class="login" style="margin-left: auto; margin-right: auto;">
+          <tr>
+            <td><p class="mtop0 mbottom025"><strong><label for="email"><%= t(:name)%></label></strong></p><input id="email" tabindex="1" class="inputtext" type="text" name="email" /></td>
+          </tr>
+          <tr>
+            <td><p class="mtop05 mbottom025"><strong><label for="password"><%= t(:password)%></label></strong></p><input tabindex="2" class="inputtext" type="password" name="password" id="password" /></td>
+          </tr>
+
+          <tr>
+            <td>
+              <p class="mtop025 mbottom0 smalltxt"><a href="/app/wa/Password/forgot">Forgot password?</a>
+                <span style="padding: 0 3px;">|</span> <a href="/app/wa/GoogleApps/signIn">Login using Google Apps</a>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="mtop025 mbottom0 smalltxt"><input type="checkbox" name="remember" id="rememberMe" tabindex="3"/> <label for="rememberMe">Remember me</label></p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 10px;">
+              <input class="public-button" type="submit" tabindex="4" value=l(:login) />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div> <!-- wrapper -->
+  </div> <!-- content -->
+</div>
+****************************************************
+<div id="container">
+  <div id="content">
+    <div class="wrapper">
+      <%= form_for 'login_form',url:'/login/login' %>
+      <% end %>
+    </div>
+  </div>
+</div>
