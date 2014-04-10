@@ -1,0 +1,54 @@
+body {
+  text-align: center;
+  margin: 0px;
+  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  color: #4A4A4A ;
+}
+div ,ul,li{
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background:transparent;
+}
+#top {
+  background-repeat: repeat-x;
+  background: #5a5a5a url("beijing1.jpg") no-repeat top;
+  width: atuo;
+  height: 121px;
+}
+#header {
+  padding:50px 0 10px;
+  clear:both;
+  position:relative;
+  height: 61px;
+}
+.col-full{
+  width: 940px;
+  height:61px;
+  margin:0 auto;
+}
+#logo{
+  padding:0px 0 0px;
+  float:left;
+}
+#nav{
+  margin-top: 35px;
+  list-style: none;
+  line-height: 1;
+}
+.fr{
+  float:right;
+}
+#nav li{
+  padding: 5px;
+  display: inline;
+}
+#nav li a{
+  font-size: 25px;
+  text-decoration: none;
+  color:#ffffff;
+}

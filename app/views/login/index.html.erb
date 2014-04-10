@@ -1,5 +1,5 @@
 <%=  javascript_include_tag "login" %>
-<%= form_for('login_form',url:'/login/login') do |f| %>
+<!---<%= form_for('login_form',url:'/login/login') do |f| %>
    <table>
      <tr>
       <%= f.label :name %>
@@ -15,7 +15,7 @@
    </table>
 <% end %>
 <a href="#" data-background-color = "#990000" data-no-turbolink >Paint it red</a>
-<%= debug(@user)%>
+<%= debug(@user)%>--->
 
 <div id="container">
   <div id="content">
@@ -24,10 +24,12 @@
         <input type="hidden" value="false" name="returning" id="returning" />
         <table class="login" style="margin-left: auto; margin-right: auto;">
           <tr>
-            <td><p class="mtop0 mbottom025"><strong><label for="email"><%= t(:name)%></label></strong></p><input id="email" tabindex="1" class="inputtext" type="text" name="email" /></td>
+            <td><p class="mtop0 mbottom025"><strong><label for="email"><%= t(:name)%></label></strong></p>
+              <input id="email" tabindex="1" class="inputtext" type="text" name="email" /></td>
           </tr>
           <tr>
-            <td><p class="mtop05 mbottom025"><strong><label for="password"><%= t(:password)%></label></strong></p><input tabindex="2" class="inputtext" type="password" name="password" id="password" /></td>
+            <td><p class="mtop05 mbottom025"><strong><label for="password"><%= t(:password)%></label></strong></p>
+              <input tabindex="2" class="inputtext" type="password" name="password" id="password" /></td>
           </tr>
 
           <tr>
@@ -44,7 +46,7 @@
           </tr>
           <tr>
             <td style="padding-top: 10px;">
-              <input class="public-button" type="submit" tabindex="4" value=l(:login) />
+              <input class="public-button" type="submit" tabindex="4" value="login" />
             </td>
           </tr>
         </table>
@@ -52,12 +54,26 @@
     </div> <!-- wrapper -->
   </div> <!-- content -->
 </div>
-****************************************************
+<!--****************************************************
 <div id="container">
   <div id="content">
     <div class="wrapper">
-      <%= form_for 'login_form',url:'/login/login' %>
+      <%= form_for 'login_form',url:'/login/login' do %>
+        <table>
+          <tr>
+            <td>
+              <p class="mtop0 mbottom025"><strong><label for="email"><%= t(:name)%></label></strong></p>
+              <%= text_field_tag 'name' %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+
+            </td>
+          </tr>
+        </table>
       <% end %>
     </div>
   </div>
 </div>
+-->

@@ -2,11 +2,37 @@
 <html>
 <head>
   <title>Sx</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <!--%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %-->
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "layout" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="top">
+    <div id = "header">
+        <div class="col-full">
+            <div id="logo" class="f1">
+                <a href="http://www.baidu.com">
+                  <%= image_tag('lwd-logo-new.png')%>
+                </a>
+            </div>
+            <ul id="nav" class="fr">
+                  <li id="menu-item-51" class="">
+                    <%= link_to 'home',home_index_path %>
+                  </li>
+                  <li id="menu-item-51" class="">
+                    <%= link_to 'product',productions_index_path %>
+                  </li>
+                  <li id="menu-item-51" class="">
+                    <%= link_to 'about',home_index_path %>
+                  </li>
+                  <li id="menu-item-51" class="">
+                    <%= link_to 'login',login_index_path %>
+                  </li>
+            </ul>
+        </div>
+    </div>
+</div>
 <%= yield %>
 
 </body>

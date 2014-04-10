@@ -1,4 +1,8 @@
 Sx::Application.routes.draw do
+  get 'productions/index'
+  get 'productions/show'
+  get 'productions/edit'
+  get 'productions/new'
   #homesite
   root :to => 'home#index'
   resource :register ,:login

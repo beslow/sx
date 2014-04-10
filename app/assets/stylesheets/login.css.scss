@@ -3,14 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* prefix? radius = y, grad = n */
 
-body {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 20px;
-}
 
 /*
 #grid {
@@ -47,8 +39,6 @@ div.clear {
 }
 
 
-#header  { padding: 22px 00px 12px 00px; }
-#top     { padding: 30px 00px 00px 00px; }
 #content { padding: 50px 00px 30px 00px; }
 #footer  { padding: 20px 00px 40px 00px; }
 
@@ -1111,10 +1101,21 @@ input.inputtext {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 13px;
   border-radius: 3px;
-  behavior: url(/_pie/PIE.htc);
 }
-
-
+#login_form_name {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 1px solid #aaa;
+  padding: 7px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+  border-radius: 3px;
+  width: 250px !important;
+}
+input:-webkit-autofill, textarea:-webkit-autofill {
+  background-color: rgb(250, 255, 189);
+  background-image: none;
+  color: rgb(0, 0, 0);
+}
 /* ***************************
        Misc
 **************************** */
@@ -2403,7 +2404,6 @@ a.imglink img {
 */
 
 #header { background: #eeede7; border-bottom: 2px solid #d8d5c7; }
-#top { background: #e6e4db; border-bottom: 4px solid #d8d5c7; }
 body { background: #f7f6f3; }
 .footer-home { background: #eeede7 !important; border-top: 2px solid #d8d5c7; }
 

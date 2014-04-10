@@ -17,4 +17,6 @@ $ ->
     i = 4 if i < 1
     changeBackGroundImage(indexCover,i)
     return
+  #$('[data-btntype]').onclick ->
+  #  $this.data("data-btntype")
 return

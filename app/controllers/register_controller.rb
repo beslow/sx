@@ -1,4 +1,5 @@
 class RegisterController < ApplicationController
+  layout "loginregister"
   include RegisterHelper
   def index
   end

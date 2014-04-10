@@ -1,4 +1,6 @@
-<div id="indexCover" >
+<%= stylesheet_link_tag "home" %>
+home
+<!--<div id="indexCover" >
   <div id="topBar">
     <% if @current_user.blank? %>
     <ul>
@@ -17,9 +19,15 @@
 </div>
 <div id="blank1"></div>
 <div id="funMenu">
-  <div id="M1"></div>
-  <div id="M2"></div>
-  <div id="M3"></div>
+  <div id="M1" data-btntype="veg" >
+    <%= image_tag('rails.png') %>
+  </div>
+  <div id="M2" data-btntype="fla" >
+    <%= image_tag('rails.png') %>
+  </div>
+  <div id="M3" data-btntype="oth" >
+    <%= image_tag('rails.png') %>
+  </div>
 </div>
 <div id="blank2"></div>
 <% 6.times do %>
@@ -56,3 +64,4 @@
     <a href="http://www.designshock.com/"> DesignShock.com </a>
   </div>
 <% end %>
+-->
