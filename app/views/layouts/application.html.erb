@@ -9,6 +9,14 @@
 </head>
 <body>
 <div id="top">
+    <div id="show_name">
+      <% unless @current_user.blank? %>
+          <ul>
+            <li><%= link_to @current_user.name   %></li>
+            <li><%= link_to t(:logout),login_logout_path%></li>
+          </ul>
+      <% end %>
+    </div>
     <div id = "header">
         <div class="col-full">
             <div id="logo" class="f1">

@@ -1,13 +1,36 @@
+
 <%= stylesheet_link_tag "productions" %>
+<div id="container">
 <div id="classify">
+  <div id="choice_title">
 
-</div>
-<div id="content">
-
+  </div>
+  <ul id="classify_item">
+    <li>
+      <label><%= t(:veg)%></label>
+      <%= label_tag 'vgg','#','data-changetype' => '/productions/change_type','data-protype'=>'V'%>
+    </li>
+    <li>
+      <label><%= t(:veg)%></label>
+    </li>
+    <li>
+      <label><%= t(:veg)%></label>
+    </li>
+    <li>
+      <label><%= t(:veg)%></label>
+    </li>
+    <li>
+      <label><%= t(:veg)%></label>
+    </li>
+    <li>
+      <label><%= t(:veg)%></label>
+    </li>
+  </ul>
 </div>
 <div id="how_show">
 
 </div>
-<% @products.each do |product| %>
-    <%=h product.name %><br/>
-<% end %>
+<div id="content">
+  <%= render @products %>
+</div>
+</div>

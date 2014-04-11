@@ -16,12 +16,29 @@ div ,ul,li{
 }
 #top {
   background-repeat: repeat-x;
-  background: #5a5a5a url("beijing1.jpg") no-repeat top;
+  background: #5a5a5a url("beijing1.jpg") repeat-x top;
   width: atuo;
   height: 121px;
 }
+#show_name{
+  width:auto;
+  height: 50px;
+}
+#show_name ul{
+  font-size: 18px;
+  list-style: none;
+  float:right;
+  margin-top:20px;
+  margin-right: 10px;
+}
+#show_name li{
+  display: inline;
+}
+#show_name a{
+  text-decoration: none;
+}
 #header {
-  padding:50px 0 10px;
+  padding:0px 0 10px;
   clear:both;
   position:relative;
   height: 61px;

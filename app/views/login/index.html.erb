@@ -54,7 +54,7 @@
     </div> <!-- wrapper -->
   </div> <!-- content -->
 </div>
-<!--****************************************************
+--****************************************************
 <div id="container">
   <div id="content">
     <div class="wrapper">
@@ -68,7 +68,13 @@
           </tr>
           <tr>
             <td>
-
+              <p class="mtop05 mbottom025"><strong><label for="password"><%= t(:password)%></label></strong></p>
+              <%= password_field_tag 'password'%>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <%= submit_tag 'login',class: 'public-button' %>
             </td>
           </tr>
         </table>
@@ -76,4 +82,3 @@
     </div>
   </div>
 </div>
--->

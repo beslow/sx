@@ -6,9 +6,7 @@ class ProductionsController < ApplicationController
       @products=Production.where(pro_type: params[:protype])
     else
       @products = Production.where(pro_type: 'T')
-
-    end
-    binding.pry
+  end
   end
 
   def show
@@ -22,10 +20,11 @@ class ProductionsController < ApplicationController
 
   def change_type
     puts  'it is coming back!'
+
     type = params[:protype]
     @products = Production.where(pro_type: type)
     #binding.pry
-    #redirect_to :action=>'index',:protype =>  params[:protype]
-    render :action => 'index'
+    #redirect_to productions_index_path,:protype =>  params[:protype]
+    render "productions/index"
   end
 end

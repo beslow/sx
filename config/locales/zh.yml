@@ -11,3 +11,6 @@ zh:
   register: 注册
   login: 登陆
   logout: 退出
+
+#app/views/productions/index.html.erb
+  veg: veg

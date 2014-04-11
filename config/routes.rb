@@ -3,6 +3,7 @@ Sx::Application.routes.draw do
   get 'productions/show'
   get 'productions/edit'
   get 'productions/new'
+  get 'productions/change_type'
   #homesite
   root :to => 'home#index'
   resource :register ,:login
@@ -20,6 +21,11 @@ Sx::Application.routes.draw do
       get 'checkname'
     end
   end
+  #resources :productions do
+  #  collection do
+  #    get 'change_type'
+  #  end
+  #end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
