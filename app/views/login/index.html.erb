@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "login" %>
 <%=  javascript_include_tag "login" %>
 <!---<%= form_for('login_form',url:'/login/login') do |f| %>
    <table>
@@ -15,7 +16,7 @@
    </table>
 <% end %>
 <a href="#" data-background-color = "#990000" data-no-turbolink >Paint it red</a>
-<%= debug(@user)%>--->
+<%= debug(@user)%>
 
 <div id="container">
   <div id="content">
@@ -51,33 +52,37 @@
           </tr>
         </table>
       </form>
-    </div> <!-- wrapper -->
-  </div> <!-- content -->
-</div>
---****************************************************
+    </div>
+  </div>
+</div-->
+<%= stylesheet_link_tag "productions" %>
 <div id="container">
+  <div id="classify">
+  </div>
+  <div id="how_show">
+  </div>
   <div id="content">
     <div class="wrapper">
       <%= form_for 'login_form',url:'/login/login' do %>
-        <table>
-          <tr>
-            <td>
-              <p class="mtop0 mbottom025"><strong><label for="email"><%= t(:name)%></label></strong></p>
-              <%= text_field_tag 'name' %>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p class="mtop05 mbottom025"><strong><label for="password"><%= t(:password)%></label></strong></p>
-              <%= password_field_tag 'password'%>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <%= submit_tag 'login',class: 'public-button' %>
-            </td>
-          </tr>
-        </table>
+          <table>
+            <tr>
+              <td>
+                <p class="mtop0 mbottom025"><strong><label for="email"><%= t(:name)%></label></strong></p>
+                <%= text_field_tag 'name' %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="mtop05 mbottom025"><strong><label for="password"><%= t(:password)%></label></strong></p>
+                <%= password_field_tag 'password'%>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= submit_tag 'login',class: 'public-button' %>
+              </td>
+            </tr>
+          </table>
       <% end %>
     </div>
   </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140411041527) do
+ActiveRecord::Schema.define(version: 20140414024040) do
 
   create_table "productions", force: true do |t|
     t.string   "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140411041527) do
     t.string   "pro_type"
     t.string   "placefrom"
     t.string   "available"
+    t.string   "img_url"
   end
 
   create_table "users", force: true do |t|

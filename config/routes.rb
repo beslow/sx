@@ -1,4 +1,5 @@
 Sx::Application.routes.draw do
+  get "contact/index"
   get 'productions/index'
   get 'productions/show'
   get 'productions/edit'

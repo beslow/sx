@@ -1,1 +1,31 @@
-<p>Product Name:<%= production.name %></p>
+<% if params[:way_display] == 'text'%>
+<!--p>Product Name:<%= production.name %></p-->
+
+  <tr>
+    <td>
+      <%= production.no %>
+    </td>
+    <td>
+      <%= production.name %>
+    </td>
+    <td>
+      <%= production.price %>
+    </td>
+    <td>
+      <%= production.unit %>
+    </td>
+    <td>
+      <%= production.placefrom %>
+    </td>
+    <td>
+      <%= production.available %>
+    </td>
+  </tr>
+<% elsif params[:way_display] == 'pic' %>
+    <div class="box1">
+      <%= image_tag("li.jpg") %>
+      <%= production.name %>
+      <br/>
+      <!--a href="http://www.designshock.com/"> DesignShock.com </a-->
+    </div>
+<% end %>

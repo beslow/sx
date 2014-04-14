@@ -2,13 +2,13 @@
 class ProductionsController < ApplicationController
 
   def index
+  
     unless params[:protype].blank?
       @products=Production.where(pro_type: params[:protype])
     else
       @products = Production.where(pro_type: 'T')
-
     end
-    binding.pry
+    params[:way_display] = 'pic' if params[:way_display].blank?
   end
 
   def show
@@ -26,6 +26,6 @@ class ProductionsController < ApplicationController
     @products = Production.where(pro_type: type)
     #binding.pry
     #redirect_to :action=>'index',:protype =>  params[:protype]
-    render :action => 'index'
+    render :controller => 'Productions',:action => 'index'
   end
 end

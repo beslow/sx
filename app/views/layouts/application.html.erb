@@ -10,7 +10,8 @@
 <body>
 <div id="top">
     <div id="show_name">
-      <% unless @current_user.blank? %>
+      <% unless session[:user_id].blank? %>
+          <% @current_user = User.find_by(id: session[:user_id]) %>
           <ul>
             <li><%= link_to @current_user.name   %></li>
             <li><%= link_to t(:logout),login_logout_path%></li>
@@ -32,7 +33,7 @@
                     <%= link_to 'product',productions_index_path %>
                   </li>
                   <li id="menu-item-51" class="">
-                    <%= link_to 'about',home_index_path %>
+                    <%= link_to 'contact',contact_index_path %>
                   </li>
                   <li id="menu-item-51" class="">
                     <%= link_to 'login',login_index_path %>

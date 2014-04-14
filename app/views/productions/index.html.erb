@@ -1,5 +1,6 @@
 
 <%= stylesheet_link_tag "productions" %>
+<%= stylesheet_link_tag "ihower" %>
 <div id="container">
 <div id="classify">
   <div id="choice_title">
@@ -7,30 +8,81 @@
   </div>
   <ul id="classify_item">
     <li>
-      <label><%= t(:veg)%></label>
-      <%= label_tag 'vgg','#','data-changetype' => '/productions/change_type','data-protype'=>'V'%>
+      <!--%= label_tag 'vgg','#','data-changetype' => '/productions/change_type','data-protype'=>'V'%-->
+      <%= link_to '#veg',productions_index_path(:protype => 'V') %>
     </li>
     <li>
-      <label><%= t(:veg)%></label>
+      <%= link_to '#veg',productions_index_path(:protype => 'T') %>
     </li>
     <li>
-      <label><%= t(:veg)%></label>
+      <%= link_to '#veg',productions_index_path(:protype => 'F') %>
     </li>
     <li>
-      <label><%= t(:veg)%></label>
+      <%= link_to '#veg',productions_index_path(:protype => 'D') %>
     </li>
     <li>
-      <label><%= t(:veg)%></label>
+      <%= link_to '#veg',productions_index_path(:protype => 'R') %>
     </li>
     <li>
-      <label><%= t(:veg)%></label>
+      <%= link_to '#veg',productions_index_path(:protype => 'Z') %>
+    </li>
+    <li>
+      <%= link_to '#veg',productions_index_path(:protype => 'O') %>
+    </li>
+    <li>
+      <%= link_to '#veg',productions_index_path(:protype => 'L') %>
     </li>
   </ul>
 </div>
-<div id="how_show">
 
+<div id="how_show">
+  <div class="row">
+    <div class="col-sm-6">
+
+      <!-- normal -->
+      <div class="ih-item circle effect15 left_to_right">
+        <% if params[:protype].blank? %>
+            <a href=<%= 'index?way_display=text'%>>
+        <%else%>
+            <a href=<%= 'index?way_display=text'+'&protype='+ params[:protype] %>>
+        <%end%>
+        <div class="img"><%= image_tag('li.jpg') %></div>
+        <div class="info">
+          <h3>list show</h3>
+          <p></p>
+        </div></a></div>
+      <!-- end normal -->
+
+    </div>
+    <div class="col-sm-6">
+
+      <!-- colored -->
+      <div class="ih-item circle colored effect15 left_to_right">
+        <% if params[:protype].blank? %>
+            <a href=<%= 'index?way_display=pic'%>>
+        <%else%>
+            <a href=<%= 'index?way_display=pic'+'&protype='+ params[:protype] %>>
+        <%end%>
+        <div class="img"><%= image_tag('2.jpg') %></div>
+        <div class="info">
+          <h3>image show</h3>
+          <p></p>
+        </div></a></div>
+      <!-- end colored -->
+
+    </div>
+  </div>
 </div>
 <div id="content">
-  <%= render @products %>
+  <% if params[:way_display] == 'text'%>
+      <table>
+        <tr>
+          <th>no</th><th>name</th><th>price</th><th>unit</th><th>placefrom</th><th>available</th>
+        </tr>
+      <%= render @products %>
+      </table>
+  <% elsif params[:way_display] == 'pic' %>
+      <%= render @products %>
+  <% end %>
 </div>
 </div>

@@ -49,3 +49,5 @@ gem 'mysql', '~> 2.9.1'
 gem 'pry-rails', :group => :development
 
 gem 'pry-nav', '~> 0.2.3'
+
+gem 'rake', '~> 10.2.2'
