@@ -1,40 +1,44 @@
 
 <%= stylesheet_link_tag "productions" %>
+<%= stylesheet_link_tag "content_layout" %>
 <%= stylesheet_link_tag "ihower" %>
 <div id="container">
 <div id="classify">
   <div id="choice_title">
 
   </div>
+  <div id="nav">
   <ul id="classify_item">
-    <li>
-      <!--%= label_tag 'vgg','#','data-changetype' => '/productions/change_type','data-protype'=>'V'%-->
-      <%= link_to '#veg',productions_index_path(:protype => 'V') %>
+    <li id="F" class="item">
+      <%= label_tag 'vgg','#','data-changetype' => '/productions/change_type','data-protype'=>'V'%>
+      <%= link_to t(:V),productions_index_path(:protype => 'V',:way_display => params[:way_display]) %>
     </li>
-    <li>
-      <%= link_to '#veg',productions_index_path(:protype => 'T') %>
+    <li id="F"  class="item">
+      <%= link_to t(:F),productions_index_path(:protype => 'F',:way_display => params[:way_display]) %>
     </li>
-    <li>
-      <%= link_to '#veg',productions_index_path(:protype => 'F') %>
+    <li id="T"  class="item">
+      <%= link_to t(:T),productions_index_path(:protype => 'T',:way_display => params[:way_display]) %>
     </li>
-    <li>
-      <%= link_to '#veg',productions_index_path(:protype => 'D') %>
+    <li id="D" class="item">
+      <%= link_to t(:D),productions_index_path(:protype => 'D',:way_display => params[:way_display]) %>
     </li>
-    <li>
-      <%= link_to '#veg',productions_index_path(:protype => 'R') %>
+    <li id="R" class="item">
+      <%= link_to t(:R),productions_index_path(:protype => 'R',:way_display => params[:way_display]) %>
     </li>
-    <li>
-      <%= link_to '#veg',productions_index_path(:protype => 'Z') %>
+    <li id="O" class="item">
+      <%= link_to t(:O),productions_index_path(:protype => 'O',:way_display => params[:way_display]) %>
     </li>
-    <li>
-      <%= link_to '#veg',productions_index_path(:protype => 'O') %>
+    <li id="L" class="item88">
+      <%= link_to t(:L),productions_index_path(:protype => 'L',:way_display => params[:way_display]) %>
     </li>
-    <li>
-      <%= link_to '#veg',productions_index_path(:protype => 'L') %>
+    <li id="Z" class="item"  data-qita='/productions/index' data-protype="Z" data-way_display=<%=params[:way_display]%>>
+      <!--%= link_to t(:Z),productions_index_path(:protype => 'Z',:way_display => params[:way_display]) %-->
+      <%= t(:Z)%>
     </li>
   </ul>
+  </div>
 </div>
-
+<a id="bai"  href="http://www.baidu.com">baidu.com</a>
 <div id="how_show">
   <div class="row">
     <div class="col-sm-6">
@@ -67,7 +71,8 @@
         <div class="info">
           <h3>image show</h3>
           <p></p>
-        </div></a></div>
+        </div></a>
+      </div>
       <!-- end colored -->
 
     </div>
@@ -77,7 +82,7 @@
   <% if params[:way_display] == 'text'%>
       <table>
         <tr>
-          <th>no</th><th>name</th><th>price</th><th>unit</th><th>placefrom</th><th>available</th>
+          <th><%= t(:no)%></th><th><%= t(:name)%></th><th><%= t(:price)%></th><th><%= t(:unit)%></th><th><%= t(:placefrom)%></th><th><%= t(:available)%></th>
         </tr>
       <%= render @products %>
       </table>

@@ -1,15 +1,7 @@
 // Place all the styles related to the productions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#container{
-  position: relative;
-}
-#classify{
-  position: relative;
-  background: burlywood;
-  width: auto;
-  height: 40px;
-}
+
 #choice_title{
   position: absolute;
   top:0;
@@ -19,7 +11,7 @@
 }
 #classify_item{
   margin-left: 230px;
-  background: hotpink;
+  background: gold;
   list-style: none;
   height: 40px;
   display: block;
@@ -29,28 +21,26 @@
   float: left;
   position: relative;
   width: 83px;
+  height: 40px;
 }
-
+.current{
+  background-color:#BBB;color:#fff;
+}
+#nav li:hover{
+  background-color:#BBB;
+  color:#fff;
+}
 #classify_item li a{
   text-align: center;
-  color:#fff;
+  color: chocolate;
   font:700 15px/40px "microsoft yahei";
   text-decoration: none;
 }
-#how_show{
-  background: bisque;
-  float:absolute;
-  left: 0px;
-  width:230px;
-  height: 1000px;
-}
-#content{
-  background: beige;
-  position: absolute;
-  top: 40px;
-  left: 230px;
-  width: 800px;
-  height: 1000px;
+#classify_item li {
+  text-align: center;
+  color: chocolate;
+  font:700 15px/40px "microsoft yahei";
+  text-decoration: none;
 }
 th {
   font: bold 11px "trebuchet ms", verdana, arial, helvetica, sans-serif;

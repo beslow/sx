@@ -1,5 +1,8 @@
 <%= stylesheet_link_tag "login" %>
+<%= stylesheet_link_tag "register" %>
 <%=  javascript_include_tag "login" %>
+<%= javascript_include_tag "register"%>
+<%= stylesheet_link_tag "content_layout" %>
 <!---<%= form_for('login_form',url:'/login/login') do |f| %>
    <table>
      <tr>
@@ -55,35 +58,116 @@
     </div>
   </div>
 </div-->
-<%= stylesheet_link_tag "productions" %>
+
 <div id="container">
   <div id="classify">
   </div>
   <div id="how_show">
   </div>
   <div id="content">
+    <div class="login_title"><h1>登陆从这里开始</h1></div>
     <div class="wrapper">
       <%= form_for 'login_form',url:'/login/login' do %>
           <table>
             <tr>
               <td>
-                <p class="mtop0 mbottom025"><strong><label for="email"><%= t(:name)%></label></strong></p>
-                <%= text_field_tag 'name' %>
+               <label for="email"><%= t(:name)%></label>
+              </td>
+              <td>
+                <%= text_field_tag 'name','',class:'txt1_bg' %>
               </td>
             </tr>
             <tr>
               <td>
-                <p class="mtop05 mbottom025"><strong><label for="password"><%= t(:password)%></label></strong></p>
-                <%= password_field_tag 'password'%>
+                <label for="password"><%= t(:password)%></label>
+              </td>
+              <td>
+                <%= password_field_tag 'password','',class:'txt1_bg'%>
               </td>
             </tr>
             <tr>
+              <td></td>
               <td>
-                <%= submit_tag 'login',class: 'public-button' %>
+                <div class="register_button ">
+                <%= submit_tag t(:login),class: 'position_login_btn' %>
+                </div>
               </td>
             </tr>
           </table>
       <% end %>
     </div>
+    <div class="register">
+        <div class="register_title"><h1>还没注册，↓</h1></div>
+      <%= form_for('register_form',url:'/register/register') do |f| %>
+            <div class="content_register">
+              <table class="ipt_box">
+                <tr>
+                  <td>
+                    <%= f.label t(:name) %><span class="required"> *</span>
+                  </td>
+                  <td>
+                    <%= f.text_field :name,required: true,class:'txt1_bg','data-validate'=> '/users/checkname' %>
+                  </td>
+                  <td>
+                    <div id="divName_info"></div>
+                  </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                  <td>
+                    <%= f.label t(:password) %><span class="required"> *</span>
+                  </td>
+                  <td>
+                    <%= f.password_field :password,required:true,class:'txt1_bg',"data-length" => "" %>
+                  </td>
+                  <td>
+                    <div id='divPassword1_info'></div>
+                  </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                  <td>
+                    <%= f.label t(:password_again) %><span class="required"> *</span>
+                  </td>
+                  <td>
+                    <%= f.password_field :password_confirmation,required:true,class:"txt1_bg",'data-confirmation' => '' %>
+                  </td>
+                  <td>
+                    <div id="divPassword2_info"></div>
+                  </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                  <td>
+                    <%= f.label t(:mail) %><span class="required"> *</span>
+                  </td>
+                  <td>
+                    <%= f.text_field :email,required:true,class:"txt1_bg",'data-email'=>'' %>
+                  </td>
+                  <td>
+                    <div id="divMail_info"></div>
+                  </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                  <td>
+                    <%= f.label t(:company) %>
+                  </td>
+                  <td>
+                    <%= f.text_field :company,class:"txt1_bg" %>
+                  </td>
+                </tr>
+              </table>
+              <br/>
+              <% if flash[:notice] %>
+                  <div class="notice"><%= flash[:notice] %></div>
+              <% else %>
+                  <br/>
+              <% end %><br/>
+              <div class="register_button position_button">
+                <%= f.submit t(:btn_register)  %>
+              </div>
+            </div>
+      <% end %>
   </div>
 </div>

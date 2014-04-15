@@ -2,7 +2,7 @@
 class ProductionsController < ApplicationController
 
   def index
-  
+
     unless params[:protype].blank?
       @products=Production.where(pro_type: params[:protype])
     else

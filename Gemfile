@@ -44,7 +44,8 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'mysql', '~> 2.9.1'
+#gem 'mysql', '~> 2.9.1'
+gem 'mysql2', '~> 0.3.15'
 
 gem 'pry-rails', :group => :development
 

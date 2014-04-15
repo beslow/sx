@@ -1,10 +1,10 @@
 zh:
 #app/views/register/index.html.erb
   name: 用户名
-  password: 密码
+  password: 密    码
   password_again: 确认密码
-  mail: 邮箱
-  company: 单位
+  mail: 邮        箱
+  company: 单        位
   btn_register: 注册
 
 #app/views/home/index.html.erb
@@ -13,4 +13,23 @@ zh:
   logout: 退出
 
 #app/views/productions/index.html.erb
-  veg: veg
+  V: 蔬菜
+  D: 豆制品
+  F: 水果
+  R: 肉类
+  O: 粮油
+  T: 调料
+  Z: 其他
+  L: 冷冻食品
+
+  no: 编号
+  product_name: 品名
+  price: 价格
+  unit: 单位
+  placefrom: 产地
+  available: 有货
+#app/views/layouts/application.html.erb
+  home: 首页
+  contact: 联系我们
+  product: 我们有什么
+  login_register: 登陆注册
